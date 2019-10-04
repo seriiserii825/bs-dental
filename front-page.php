@@ -34,8 +34,9 @@ $page_front_id = 284;
                                     <h1>
                                         <span><?php the_title(); ?></span>
                                     </h1>
-
-                                    <p class="mobile-hidden"><?php the_content(); ?></p>
+                                    <p class="mobile-hidden">
+                                        <a href="<?php echo get_page_link(262); ?>"><?php echo carbon_get_the_post_meta('crb_slider_text'.get_lang()); ?></a>
+                                    </p>
                                 </div><!-- /.slide-caption-inner -->
                             </div><!-- /.slide-caption -->
                         </li><!-- /.slide -->

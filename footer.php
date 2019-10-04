@@ -63,7 +63,7 @@
                     <li>
                         <p>
                             <span class="footer-contacts-list__title">Email :</span>
-                            <span><a href="mailto:<?php echo get_option('admin_email'); ?>"><?php echo get_option('admin_email'); ?></a></span>
+                            <span><a href="mailto:<?php echo carbon_get_theme_option('crb_email'); ?>"><?php echo carbon_get_theme_option('crb_email'); ?></a></span>
                         </p>
 
                     </li>

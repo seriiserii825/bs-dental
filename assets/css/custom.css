@@ -12594,7 +12594,7 @@ a.logo:hover {
 /*Section Book Appointment*/
 .section-book-appointment {
 	position: relative;
-	padding: 100px 0 115px;
+	padding: 60px 0;
 }
 
 .form-appointment .form-head {
@@ -12702,8 +12702,8 @@ a.logo:hover {
 
 .section-about-us {
 	position: relative;
-	min-height: 620px;
-	padding-top: 104px;
+	min-height: 420px;
+	padding-top: 60px;
 	margin-right: -15px;
 	-webkit-background-size: auto auto;
 	background-size: auto auto;
@@ -12734,8 +12734,8 @@ a.logo:hover {
 
 .section-features {
 	position: relative;
-	min-height: 620px;
-	padding: 100px 0 0 56px;
+	min-height: 440px;
+	padding: 60px 0 0 56px;
 }
 
 .section-features h6 {
@@ -12784,7 +12784,7 @@ a.logo:hover {
 .section-doctors {
 	position: relative;
 	z-index: 4;
-	padding: 78px 0 155px;
+	padding: 50px 0;
 }
 
 .section-doctors-alt {
@@ -12815,9 +12815,6 @@ a.logo:hover {
 	margin-bottom: 40px;
 }
 
-.section-actions {
-	padding-bottom: 50px;
-}
 .doctor-name {
 	display: inline-block;
 	padding: 16px 33px 15px;
@@ -13010,7 +13007,7 @@ a.logo:hover {
 .section-testimonials {
 	position: relative;
 	z-index: 5;
-	padding: 80px 0 148px;
+	padding: 50px 0 88px;
 	background-color: #3b4754;
 }
 
@@ -13056,7 +13053,7 @@ a.logo:hover {
 }
 
 .section-updates .section-actions {
-	padding-top: 70px;
+	padding-top: 20px;
 	text-align: center;
 }
 
@@ -14041,7 +14038,7 @@ a.logo:hover {
 	right: 0;
 	z-index: 60;
 	height: 445px;
-	padding-top: 83px;
+	padding-top: 43px;
 	background-color: #54667a;
 }
 @media screen and (max-width: 1026px) {
@@ -14151,7 +14148,6 @@ a.logo:hover {
 .copyright {
 	padding-top: 20px;
 	border-top: 1px solid #5c6f83;
-	margin-top: 97px;
 	text-align: center;
 }
 
@@ -14630,9 +14626,28 @@ a.logo:hover {
 }
 
 .intro-slider .slide-caption-inner {
-	padding: 30px 33px;
+	padding: 10px 33px;
 	border-left: 3px solid #51b8f2;
 	background-color: #fff;
+}
+
+.intro-slider .slide-caption-inner p {
+	text-align: center;
+}
+.intro-slider .slide-caption-inner .mobile-hidden {
+	padding-left: 40px;
+	text-align: left;
+}
+.intro-slider .slide-caption-inner .mobile-hidden a {
+	line-height: 1;
+	color: #54667a;
+	font-size: 30px;
+	font-weight: 700;
+	transition: all .4s ease;
+}
+
+.intro-slider .slide-caption-inner .mobile-hidden a:hover {
+	color: #51b8f2;
 }
 
 .intro-slider .slide-caption-inner h1 {
@@ -14640,6 +14655,7 @@ a.logo:hover {
 }
 
 .intro-slider .slide-caption-inner h1 span {
+	font-size: 16px;
 	font-weight: 300;
 }
 
@@ -14682,13 +14698,13 @@ a.logo:hover {
 .bx-wrapper .bx-controls .bx-prev:before {
 	content: "";
 	left: 47px;
-	font-size: 24px;
+	font-size: 44px;
 }
 
 .bx-wrapper .bx-controls .bx-next:before {
 	content: "";
 	right: 47px;
-	font-size: 24px;
+	font-size: 44px;
 }
 
 /*Slider Testimonials*/

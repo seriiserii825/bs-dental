@@ -10,6 +10,8 @@ function crb_attach_theme_options()
 {
 	$basic_options_container = Container::make('theme_options', __('Basic Options'))
 		->add_tab(__('Contacts'), array(
+			Field::make('text', 'crb_email', __('Email')),
+			
 			Field::make('text', 'crb_phone', __('Phone'))
 				->set_width(30),
 			Field::make('text', 'crb_phone2', __('Phone 2'))

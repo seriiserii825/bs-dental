@@ -31,3 +31,18 @@ function crb_specialist_post_options()
 			Field::make('rich_text', 'crb_specialist_meta_text_en', __('Meta en')),
 		));
 }
+
+add_action('carbon_fields_register_fields', 'crb_slider_post_options');
+function crb_slider_post_options()
+{
+	Container::make('post_meta', __('Caption'))
+		->where('post_type', '=', 'slider')
+		->add_tab('Meta text', array(
+			Field::make('text', 'crb_slider_text_ru', __('Meta ru'))
+			->set_width(30),
+			Field::make('text', 'crb_slider_text_ro', __('Meta ro'))
+			->set_width(30),
+			Field::make('text', 'crb_slider_text_en', __('Meta en'))
+			->set_width(30),
+		));
+}
