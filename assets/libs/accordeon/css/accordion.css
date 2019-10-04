@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/*
+* Лёгкийи и отзывчивый аккордеон
+* минимум кода, максимум функционала
+* без javascript, на чистом CSS
+* работает на скрытых checkbox.
+* автор: @dobrovoi dbmast.ru
+*/
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  ьшт-height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  border: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background:  #3e3e3e
+}
+
+
+hr {
+  height: 1px;
+  width: 90%;
+  margin: 50px auto;
+  border: 0;
+  box-shadow: rgba(241, 241, 241, 0.05) 3px 2px 3px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+}
+h1 {
+  color: #dddddd;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+.container {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 0;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.info {
+  margin: 25px auto;
+  text-align: center;
+  color: #b9b9b9
+}
+.info a {
+  color: burlywood;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+.info a:hover {
+  color: #e07e00
+}
+
+/*
+* Формируем базовый контейнер аккордеона
+*/
+.accordion {
+  width: 100%;
+  /*
+	ширина произвольная выбирается
+	*в зависимостиот места размещения
+	*/
+  max-width: 600px;
+  min-height: 0;
+  display: block;
+  /* относительное позиционирование */
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fefffa;
+  overflow: hidden
+}
+/* заголовки панелей аккордеона */
+.accordion h2 {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: #f4f4f4;
+  background: #2d8bbb;
+  border-top: 1px solid #3face4;
+  border-bottom: 1px solid #2479a5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* заголовки панелей аккордеона при наведении
+* в данном варианте не срабатывает
+*/
+/* .accordion h2:hover {
+    display: block;
+    background-color: #005049;
+}
+*/
+
+/* Формируем блоки с содерханием */
+.msg {
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* оформляем параграфы */
+.msg p {
+  color: rgba(48, 69, 92, 0.8);
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  padding: 0 20px
+}
+
+/* Позаботимся о небольших экранах */
+@media (max-width: 550px) {
+  .accordion {
+    box-sizing: border-box;
+    transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0;
+  }
+}
+
+/* Формируем неупорядоченный список */
+.accordion ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+
+/* Определяем и формируем отдельный элемент списка
+ * в который поместим скрытый флажек,
+ * заголовок панелей и блок с содержанием
+*/
+.accordion ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* устанавливаем время ожидания перед воспроизведением анимации
+ * на основе нумерации в дереве элементов
+*/
+.accordion ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.accordion ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.accordion ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.accordion ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+/* Сформируем  указатель переключения состояния аккордеона */
+.accordion ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  /* расположим указатель на панели заголовка справа */
+  right: 25px;
+}
+
+/* "Рисуем " сам указатель */
+.accordion ul li i:before, .accordion ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #eee;
+  width: 3px;
+  height: 9px;
+}
+/* Добавляем элемент трансформации указателя при переключении */
+.accordion ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+
+/* Делаем чекбокс скрытым*/
+.accordion ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+/* Когда у флажка установлен checked
+ * блок с содержанием скрыт
+*/
+.accordion ul li input[type=checkbox]:checked ~ div.msg {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+/* А указатель показывает вниз */
+.accordion ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accordion ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+/*  Устанавливаем эффект перехода
+ * между двумя состояниями указателя
+*/
+div.msg, ul li i:before, ul li i:after {
+  transition: all 0.5s ease-in-out;
+}
+/**
+ * Изображения внутри аккордеона
+ * ...сделаем их отзывчивыми
+ */
+.accordion .msg img {
+  width: 100%;
+  height: auto;
+  -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* полноразмерная картинка */
+.msg img .large-img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* миниатюра слева */
+.msg img.img-left {
+  width: 25%;
+  float:left;
+  margin:5px 15px 5px 0;
+}
+/* миниатюра справа */
+.msg img.img-right {
+  width: 25%;
+  float:right;
+  margin:5px 0 5px 15px;
+}
+
+/* Встраеваемое видео */
+.video-responsive {
+  margin: 20px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/* Предусмотри использование кода встраиваемого видео
+ *через iframe, object или embed */
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

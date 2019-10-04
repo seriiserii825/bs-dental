@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Separator
+   ========================================================================== */
+.cf-container-term-meta .cf-separator .cf-field__head {
+  display: none; }
+
+.cf-container-term-meta .cf-separator .cf-field__body {
+  position: absolute;
+  left: 0; }
+
+/*# sourceMappingURL=style.css.map */

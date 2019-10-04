@@ -1,0 +1,65 @@
+/*
+Error: Undefined variable: "$color-white".
+        on line 21 of style.scss
+
+16: 
+17: .cf-container__fields {
+18: 	display: flex;
+19: 	flex-wrap: wrap;
+20: 	margin: -1px -1px 0 0;
+21: 	background-color: $color-white;
+22: 
+23: 	&[hidden] {
+24: 		display: none;
+25: 	}
+26: 
+
+Backtrace:
+style.scss:21
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Ruby25-x64/bin/sass:23:in `load'
+C:/Ruby25-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$color-white\".\A         on line 21 of style.scss\A \A 16: \A 17: .cf-container__fields {\A 18: 	display: flex;\A 19: 	flex-wrap: wrap;\A 20: 	margin: -1px -1px 0 0;\A 21: 	background-color: $color-white;\A 22: \A 23: 	&[hidden] {\A 24: 		display: none;\A 25: 	}\A 26: "; }
