@@ -52,7 +52,7 @@
                     <?php
                         $phone = carbon_get_theme_option('crb_phone');
                     ?>
-                    <a href='<?php echo clear_phone($phone); ?>'><?php echo $phone; ?></a>
+                    <a href='tel:<?php echo clear_phone($phone); ?>'><?php echo $phone; ?></a>
                 </p><!-- /.phone -->
             </div><!-- /.columns large-3 -->
         </div><!-- /.row -->
