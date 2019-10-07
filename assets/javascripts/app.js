@@ -184,34 +184,34 @@
 			$(this)
 				.toggleClass('active');
 
-			$('.nav').slideToggle();
-			$('.sub-menu').slideUp();	
+			$('#menu-glavnoe-menyu').toggleClass('active');
+			// $('.sub-menu').slideUp();
 		});
-
-		var isMobileWidth = false;
-		function resizeHelper () {
-			if($win.width() < 768) {
-				if(isMobileWidth) {
-					return;
-				}
-
-				isMobileWidth = true;
-
-			} else {
-				if(!isMobileWidth) {
-					return;
-				}
-
-				isMobileWidth = false;
-				$('.nav').show();
-				$('.sub-menu').removeAttr('style');
-			}
-		}
-
-		$win.on('resize', function () {
-			resizeHelper();
-			$('.intro-slider .bx-start').trigger('click');
-		});
+		//
+		// var isMobileWidth = false;
+		// function resizeHelper () {
+		// 	if($win.width() < 1040) {
+		// 		if(isMobileWidth) {
+		// 			return;
+		// 		}
+		//
+		// 		isMobileWidth = true;
+		//
+		// 	} else {
+		// 		if(!isMobileWidth) {
+		// 			return;
+		// 		}
+		//
+		// 		isMobileWidth = false;
+		// 		$('.nav').show();
+		// 		$('.sub-menu').removeAttr('style');
+		// 	}
+		// }
+		//
+		// $win.on('resize', function () {
+		// 	resizeHelper();
+		// 	$('.intro-slider .bx-start').trigger('click');
+		// });
 
 		$('audio').mediaelementplayer();
 	});

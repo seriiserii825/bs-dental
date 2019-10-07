@@ -52,4 +52,10 @@ function my_revisions_to_keep($revisions)
 	return 2;
 }
 
+function getThePostThumbSrc($width, $height) {
+	$id = get_the_ID();
+	
+	return kama_thumb_src( 'w='.$width.' &h='.$height.' &post_id=' . $id . '' );
+}
+
 add_filter('wp_revisions_to_keep', 'my_revisions_to_keep');

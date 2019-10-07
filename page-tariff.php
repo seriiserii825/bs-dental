@@ -1,22 +1,25 @@
 <?php
+/**
+ * Template Name: Tariff
+ */
 get_header();
 ?>
 
     <div class="intro intro-small">
         <div class="intro-image fullsize-image-container" data-stellar-background-ratio="0.54">
-            <img src="<?php echo carbon_get_theme_option('crb_contacts_page_bg'); ?>" class="fullsize-image" alt=""/>
+            <img src="<?php echo getThePostThumbSrc(1920, 700); ?>" class="fullsize-image" alt=""/>
         </div><!-- /.intro-image -->
 
         <div class="row">
             <div class="intro-caption">
                 <h5><?php echo esc_html__('Say hello!', 'bs-dental') ?></h5>
 
-                <h2><?php echo esc_html__('Contact us', 'bs-dental') ?></h2>
+                <h2><?php the_title(); ?></h2>
             </div><!-- /.intro-caption -->
         </div><!-- /.row -->
     </div><!-- /.intro intro-small -->
 
-    <div class="main grey">
+    <div class="main grey tariff">
         <div class="row">
 
             <div class="columns large-8 medium-12">

@@ -9059,11 +9059,6 @@ h6 {
 
 /* ------------------------------------------------------------ *	Containers
 \* ------------------------------------------------------------ */
-.wrapper {
-	overflow: hidden;
-	position: relative;
-	min-height: 100%;
-}
 
 @media (max-width: 1024px) {
 	h1 {
@@ -12112,6 +12107,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 /* ------------------------------------------------------------ *	Header
 \* ------------------------------------------------------------ */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
 .header-bar {
 	border-bottom: 1px solid #d8dde3;
 	font-size: 0;
@@ -12183,7 +12186,7 @@ a.logo:hover {
 .nav {
 	position: relative;
 	z-index: 20;
-	padding-left: 28px;
+	padding-left: 10px;
 	border-left: 1px solid #d6dce2;
 	margin-top: 29px;
 }
@@ -12242,7 +12245,7 @@ a.logo:hover {
 .sub-menu {
 	visibility: hidden;
 	position: absolute;
-	top: 100%;
+	top: 20%;
 	left: 0;
 	z-index: 400;
 	width: 319px;
@@ -12353,10 +12356,6 @@ a.logo:hover {
 	.nav li:after {
 		height: 20px;
 	}
-
-	.header .phone {
-		margin-top: -20px;
-	}
 }
 
 @media (max-width: 767px) {
@@ -12372,15 +12371,15 @@ a.logo:hover {
 		position: static;
 	}
 
-	.nav {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		z-index: 999;
-		display: none;
-		background-color: #fff;
-	}
+	/*.nav {*/
+	/*	position: absolute;*/
+	/*	top: 100%;*/
+	/*	left: 0;*/
+	/*	right: 0;*/
+	/*	z-index: 999;*/
+	/*	display: none;*/
+	/*	background-color: #fff;*/
+	/*}*/
 
 	.nav ul {
 		margin: 0;
@@ -12866,6 +12865,33 @@ a.logo:hover {
 	vertical-align: middle;
 }
 
+.page-doctors {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 60px 15px;
+}
+@media screen and (max-width: 992px) {
+	.page-doctors {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.page-doctors {
+		display: block;
+		padding-bottom: 0;
+	}
+	.page-doctors .doctor {
+		margin: 0 auto 30px;
+		max-width: 360px;
+	}
+}
+
+
+.page-doctors .doctor .doctor-body,
 .home .doctor .doctor-body {
 	height: 204px;
 }
@@ -12972,15 +12998,6 @@ a.logo:hover {
 	padding-bottom: 0;
 }
 
-.section-services.section-doctors .row {
-	margin-bottom: 31px;
-}
-
-.service-image {
-	overflow: hidden;
-	height: 340px;
-}
-
 .service-image:hover {
 	opacity: 0.8;
 }
@@ -13003,7 +13020,9 @@ a.logo:hover {
 	color: #54667a;
 	text-transform: uppercase;
 }
-
+.services-grid.sale .service-body p {
+	height: auto;
+}
 .service-body p {
 	margin-bottom: 25px;
 	height: 75px;
@@ -13047,7 +13066,7 @@ a.logo:hover {
 .section-updates {
 	position: relative;
 	z-index: 30;
-	padding: 80px 0 111px;
+	padding: 80px 0 80px;
 }
 
 .section-updates .section-head {
@@ -14039,7 +14058,6 @@ a.logo:hover {
 \* ------------------------------------------------------------ */
 .footer {
 	/*position: absolute;*/
-	margin-top: -32px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -14619,7 +14637,7 @@ a.logo:hover {
 	top: 50%;
 	left: 50%;
 	width: 433px;
-	margin: -200px 0 0 -590px;
+	margin: -160px 0 0 -590px;
 }
 
 .intro-slider .slide-caption > h5 {
@@ -19498,7 +19516,7 @@ input[type=search].search-field:-ms-input-placeholder {
 }
 
 .flags-styled {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	position: relative;
 	top: -4px;
@@ -19519,6 +19537,35 @@ input[type=search].search-field:-ms-input-placeholder {
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 20px;
 	padding: 50px 0;
+}
+
+.services-grid.sale {
+	display: block;
+}
+
+.services-grid.sale .service {
+	display: table;
+	margin: 0 auto 30px;
+	max-width: 800px;
+	border: 2px solid #c2cfde;
+}
+
+.services-grid.sale .service .service-box {
+	background: #fff;
+}
+.services-grid.sale .service-image {
+	padding: 20px 0 20px;
+	border-bottom: 2px solid #c2cfde;
+}
+.services-grid.sale .service img {
+	display: table;
+	margin: 0 auto;
+	width: auto;
+}
+
+.services-grid.sale .service .service-body h6 {
+	font-size: 20px;
+	font-weight: bold;
 }
 
 @media screen and (max-width: 1180px) {
@@ -19763,6 +19810,92 @@ table {
 		display: block;
 		margin: 0 auto;
 		max-width: 500px;
+	}
+}
+
+.slider-clip .slide {
+	position: relative;
+}
+.zebra {
+	list-style: none;
+	border-left: 10px solid #00a3c7;
+	padding: 0;
+	font-family: "Lucida Sans";
+}
+.zebra li {padding: 10px;}
+.zebra li:nth-child(odd) {background: #E1F1FF;}
+.zebra li:nth-child(even) {background: white;}
+.zebra li:before {
+	display: none;
+}
+.main.tariff .event-body {
+	padding: 30px 0;
+}
+.header .large-3 {
+	width: 12%;
+}
+#menu-glavnoe-menyu {
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+#menu-glavnoe-menyu li {
+	float: none;
+}
+#menu-glavnoe-menyu li a {
+	font-size: 14px;
+}
+@media screen and (max-width: 1200px) {
+	#menu-glavnoe-menyu {
+		padding-left: 20px;
+	}
+}
+
+@media screen and (max-width: 1040px) {
+	#menu-glavnoe-menyu.active {
+		display: block;
+	}
+	#menu-glavnoe-menyu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: none;
+		padding-top: 90px;
+		padding-left: 0;
+		background: #fff;
+		z-index: 999;
+	}
+
+	#menu-glavnoe-menyu li {
+		display: block;
+	}
+	#menu-glavnoe-menyu li a {
+		display: block;
+		text-align: center;
+	}
+	.btn-menu {
+		position: absolute;
+		top: 30px;
+		right: 220px;
+		display: block;
+		z-index: 1000;
+	}
+	.flags-styled {
+		display: inline-flex;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.header {
+		display: block;
+	}
+	.phone {
+		display: none;
+	}
+	.btn-menu {
+		right: 30px;
 	}
 }
 

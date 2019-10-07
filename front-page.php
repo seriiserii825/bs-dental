@@ -125,8 +125,9 @@ $page_front_id = 284;
                     </ul><!-- /.list-features -->
 
                     <a href="<?php echo get_category_link(11); ?>"
-                       class="button btn-white btn-small"><?php echo esc_html__('Know More', 'bs-dental')
-						?></a>
+                       class="button btn-white btn-small">
+	                    <?php echo carbon_get_theme_option('button_know'.get_lang());?>
+                    </a>
                 </section><!-- /.section-features -->
             </div><!-- /.columns large-6 -->
         </div><!-- /.row -->
@@ -170,8 +171,7 @@ $page_front_id = 284;
 
                                 <a href="<?php the_permalink(); ?>" class="link-more">
                                     <i class="fa fa-plus"></i>
-									<?php echo esc_html__('Know More', 'bs-dental')
-									?>
+	                                <?php echo carbon_get_theme_option('button_know'.get_lang());?>
                                 </a>
                             </div><!-- /.doctor-box -->
                         </div><!-- /.doctor -->
@@ -184,7 +184,7 @@ $page_front_id = 284;
         </div><!-- /.row -->
 
         <div class="section-actions">
-            <a href="#" class="button btn-grey btn-small">CLICK TO VIEW ALL DOCTORS</a>
+            <a href="<?php echo get_page_link(505); ?>" class="button btn-grey btn-small"><?php echo carbon_get_theme_option('button_all_doctors'.get_lang()); ?></a>
         </div><!-- /.section-actions -->
     </section><!-- /.section-doctors -->
 
@@ -285,7 +285,7 @@ $page_front_id = 284;
 
                                     <a href="<?php the_permalink(); ?>" class="link-more">
                                         <i class="fa fa-plus"></i>
-										<?php echo esc_html__('Know More', 'bs-dental'); ?>
+	                                    <?php echo carbon_get_theme_option('button_know'.get_lang());?>
                                     </a>
                                 </div><!-- /.event-entry -->
                             </div><!-- /.event-box -->

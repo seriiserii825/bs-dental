@@ -183,6 +183,32 @@ function crb_attach_theme_options()
 				))
 				->set_layout('tabbed-horizontal')
 		));
+	
+	Container::make('theme_options', 'Buttons')
+		->set_page_parent($basic_options_container)// reference to a top level container
+		->add_fields(array(
+			Field::make('text', 'button_know_ro', __('button_know_ro'))
+				->set_width(30),
+			Field::make('text', 'button_know_ru', __('button_know_ru'))
+				->set_width(30),
+			Field::make('text', 'button_know_en', __('button_know_en'))
+				->set_width(30),
+			
+			Field::make('text', 'button_all_doctors_ro', __('button_all_doctors_ro'))
+				->set_width(30),
+			Field::make('text', 'button_all_doctors_ru', __('button_all_doctors_ru'))
+				->set_width(30),
+			Field::make('text', 'button_all_doctors_en', __('button_all_doctors_en'))
+				->set_width(30),
+			
+			Field::make('text', 'cb_taxonomy_title_ro', __('cb_taxonomy_title_ro'))
+				->set_width(30),
+			Field::make('text', 'cb_taxonomy_title_ru', __('cb_taxonomy_title_ru'))
+				->set_width(30),
+			Field::make('text', 'cb_taxonomy_title_en', __('cb_taxonomy_title_en'))
+				->set_width(30),
+		));
+	
 }
 
 
