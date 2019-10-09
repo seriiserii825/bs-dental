@@ -19,6 +19,7 @@ function crb_services_post_options() {
 			Field::make( 'complex', 'crb_services_post_slider', __( 'Slider' ) )
 			->add_fields( array(
 				Field::make( 'image', 'crb_services_post_slider_img', __( 'Slide Photo' ) )
+				->set_help_text('760x360')
 				->set_value_type('url'),
 			) )
 			->set_layout('tabbed-horizontal'),

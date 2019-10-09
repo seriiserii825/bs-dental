@@ -18,3 +18,14 @@ function crb_doctors_page_options() {
 			->set_width(30),
 		));
 }
+
+add_action( 'carbon_fields_register_fields', 'crb_sale_page_options' );
+function crb_sale_page_options() {
+	Container::make( 'post_meta', __( 'Doctors' ) )
+		->where( 'post_id', '=', 555 )
+		->add_fields(  array(
+			Field::make( 'image', 'crb_intro_image', __( 'crb_intro_image' ) )
+			->set_help_text('1920x340')
+			->set_value_type('url')
+		));
+}

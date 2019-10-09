@@ -79,5 +79,12 @@ function crb_sale_options()
 				->set_width(30),
 			Field::make('text', 'crb_sale_price_en', __('Sale price en'))
 				->set_width(30),
+
+			Field::make( 'textarea', 'short_text_ro', __( 'short_text_ro' ) )
+				->set_width(30),
+			Field::make( 'textarea', 'short_text_ru', __( 'short_text_ru' ) )
+				->set_width(30),
+			Field::make( 'textarea', 'short_text_en', __( 'short_text_en' ) )
+				->set_width(30),
 		));
 }

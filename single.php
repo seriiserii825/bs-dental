@@ -10,7 +10,11 @@ if (!defined('ABSPATH')) exit;
        require_once __DIR__.'/single-services.php';
     }elseif(in_category(15)){
 	    require_once __DIR__.'/single-post-recent-news.php';
+    }else{
+        the_title();
+        the_content();
     }
+
 ?>
 
 <?php get_footer(); ?>

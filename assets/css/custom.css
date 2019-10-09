@@ -9078,10 +9078,14 @@ h6 {
 \* ------------------------------------------------------------ */
 .alignleft {
 	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
 }
 
 .alignright {
 	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
 }
 
 .hidden {
@@ -9112,11 +9116,6 @@ h6 {
 	display: none;
 }
 
-@media (max-width: 767px) {
-	.mobile-hidden {
-		display: none;
-	}
-}
 
 /* ------------------------------------------------------------ *	Icons
 \* ------------------------------------------------------------ */
@@ -12572,6 +12571,13 @@ a.logo:hover {
 	background-color: #ffffff;
 	text-align: center;
 }
+@media screen and (max-width: 768px) {
+	.section-doctors .section-ribbon {
+		display: none;
+	}
+
+}
+
 
 .section-ribbon .ico {
 	position: relative;
@@ -12671,6 +12677,20 @@ a.logo:hover {
 	position: relative;
 }
 
+.section-information .button {
+	float: right;
+}
+@media screen and (max-width: 1020px) {
+	.section-information .button {
+		float: left;
+	}
+}
+
+
+.section-information .button--left {
+	float: left;
+}
+
 .section-information h2 {
 	color: #ffffff;
 	text-transform: uppercase;
@@ -12733,9 +12753,10 @@ a.logo:hover {
 }
 
 .section-about-us p {
-	max-width: 370px;
+	max-width: 470px;
 	margin-bottom: 32px;
 	color: #aab9ca;
+	overflow: hidden;
 }
 
 .section-features {
@@ -12750,28 +12771,38 @@ a.logo:hover {
 
 .section-features h2,
 .section-features p {
-	margin-bottom: 28px;
+	margin-bottom: 32px;
 }
 
 .section-features p {
 	color: #d0eeff;
+	overflow: hidden;
+}
+.section-features__text {
+	height: 76px;
+	overflow: hidden;
+}
+
+.section-information__list {
+	column-count: 2;
+}
+@media screen and (max-width: 600px) {
+	.section-information__list {
+		column-count: unset;
+	}
 }
 
 .list-features {
 	margin: 0 0 20px;
 	list-style: none outside none;
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-	column-count: 2;
 }
 
 .list-features li {
-	margin-bottom: 8px;
+	padding: 8px;
 }
 
 .list-features li p {
 	margin-bottom: 0;
-
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #ffffff;
@@ -13004,10 +13035,14 @@ a.logo:hover {
 
 .service-image a {
 	display: block;
+	width: 100%;
+	height: 270px;
+	overflow: hidden;
 }
 
 .service-image img {
-	width: 100%;
+	max-width: 100%;
+	height: auto;
 }
 
 .service-body {
@@ -13571,7 +13606,7 @@ a.logo:hover {
 
 	.section-about-us,
 	.section-features {
-		padding: 100px 0;
+		padding: 40px 0 80px;
 		min-height: 0;
 	}
 
@@ -14660,15 +14695,21 @@ a.logo:hover {
 	text-align: center;
 }
 .intro-slider .slide-caption-inner .mobile-hidden {
-	padding-left: 40px;
-	text-align: left;
+	margin-bottom: 10px;
+	text-align: center;
 }
 .intro-slider .slide-caption-inner .mobile-hidden a {
 	line-height: 1;
 	color: #54667a;
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: 700;
 	transition: all .4s ease;
+}
+
+@media screen and (max-width: 500px) {
+	.intro-slider .slide-caption-inner .mobile-hidden a {
+		font-size: 20px;
+	}
 }
 
 .intro-slider .slide-caption-inner .mobile-hidden a:hover {
@@ -14676,12 +14717,13 @@ a.logo:hover {
 }
 
 .intro-slider .slide-caption-inner h1 {
-	margin-bottom: 24px;
+	margin-bottom: 10px;
 }
 
 .intro-slider .slide-caption-inner h1 span {
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: 700;
+	letter-spacing: 1px;
 }
 
 .intro-slider .slide-caption-inner a {
@@ -19571,6 +19613,7 @@ input[type=search].search-field:-ms-input-placeholder {
 @media screen and (max-width: 1180px) {
 	.services-grid {
 		display: block;
+		padding: 0 15px;
 	}
 
 	.services-grid .service {
@@ -19896,6 +19939,61 @@ table {
 	}
 	.btn-menu {
 		right: 30px;
+	}
+}
+.partners {
+	padding: 50px 0 30px;
+	border-top: 2px solid #00A3C7;
+}
+
+.partners .h2-title {
+	text-align: center;
+}
+.partners__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 50px 15px;
+}
+
+.partners__content a {
+	display: block;
+}
+@media screen and (max-width: 978px) {
+	.partners__content {
+		display: block;
+	}
+	.partners__content a {
+		margin: 0 auto 30px;
+		max-width: 300px;
+	}
+}
+
+.specialist-page {
+	display: flex;
+	justify-content: space-between;
+	background: #f0f4f7;
+}
+.sale__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+.sale__header h6 {
+	margin: 0;
+}
+.sale__taxonomy {
+	font-weight: bold;
+}
+.sale-body .service-image {
+	margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+	.sale__header {
+		display: block;
 	}
 }
 

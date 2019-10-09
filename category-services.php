@@ -46,7 +46,7 @@ if (!defined('ABSPATH')) exit;
 
                                     <a href="<?php the_permalink(); ?>" class="link-more" item-prop='url'>
                                         <i class="fa fa-plus"></i>
-										<?php echo esc_html__('Know More', 'bs-dental') ?>
+										<?php echo carbon_get_theme_option('button_know'.get_lang()); ?>
                                     </a>
                                 </div><!-- /.service-body -->
                             </div><!-- /.service-box -->

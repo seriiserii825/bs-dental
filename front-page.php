@@ -91,7 +91,33 @@ $page_front_id = 284;
 
                     <h3><?php echo carbon_get_theme_option('crb_care_subtitle' . get_lang()); ?></h3>
 
-                    <p><?php echo carbon_get_theme_option('crb_care_text' . get_lang()); ?></p>
+                    <p class="section-features__text"><?php echo carbon_get_theme_option('crb_care_text' . get_lang()); ?></p>
+
+                    <ul class="section-information__list list-features" itemscope itemtype="http://schema.org/Product">
+		                <?php $technologies_posts = new WP_Query([
+			                'posts_per_page' => 6,
+			                'post_type' => 'technologies'
+		                ]); ?>
+		                <?php if ($technologies_posts->have_posts()): ?>
+			                <?php while ($technologies_posts->have_posts()): ?>
+				                <?php $technologies_posts->the_post(); ?>
+                                <li>
+                                    <p itemprop="name">
+                                        <a href="<?php the_permalink(); ?>"><i class="fa fa-plus"></i>
+							                <?php the_title(); ?></a>
+                                    </p>
+                                </li>
+			                <?php endwhile; ?>
+			                <?php wp_reset_postdata(); ?>
+		                <?php else: ?>
+		                <?php endif; ?>
+
+                    </ul><!-- /.list-features -->
+
+                    <a href="<?php echo get_page_link(356); ?>" class="button button--left btn-white btn-small">
+		                <?php echo carbon_get_theme_option('button_know'.get_lang());?>
+                    </a>
+
                 </section><!-- /.section-about-us -->
             </div><!-- /.columns large-6 -->
 
@@ -101,11 +127,11 @@ $page_front_id = 284;
 
                     <h2><?php echo carbon_get_theme_option('crb_services_subtitle' . get_lang()); ?></h2>
 
-                    <p><?php echo carbon_get_theme_option('crb_services_text' . get_lang()); ?></p>
+                    <p class="section-features__text"><?php echo carbon_get_theme_option('crb_services_text' . get_lang()); ?></p>
 
-                    <ul class="list-features" itemscope itemtype="http://schema.org/Product">
+                    <ul class="section-information__list list-features" itemscope itemtype="http://schema.org/Product">
 						<?php $services_posts = new WP_Query([
-							'posts_per_page' => -1,
+							'posts_per_page' => 6,
 							'category_name' => 'services'
 						]); ?>
 						<?php if ($services_posts->have_posts()): ?>
@@ -124,8 +150,7 @@ $page_front_id = 284;
 
                     </ul><!-- /.list-features -->
 
-                    <a href="<?php echo get_category_link(11); ?>"
-                       class="button btn-white btn-small">
+                    <a href="<?php echo get_category_link(11); ?>" class="button btn-white btn-small">
 	                    <?php echo carbon_get_theme_option('button_know'.get_lang());?>
                     </a>
                 </section><!-- /.section-features -->
@@ -188,6 +213,16 @@ $page_front_id = 284;
         </div><!-- /.section-actions -->
     </section><!-- /.section-doctors -->
 
+    <section class="section partners">
+        <div class="section-head">
+            <h2 class="h2-title"><span>Reprezentanți oficiali al companiilor</span></h2>
+        </div>
+        <div class="partners__content">
+            <a href="http://bioresearchinc.com/" class="partners__item"><img src="<?php echo get_template_directory_uri().'/assets/images/partners/logo1.jpg'; ?>" alt=""></a>
+            <a href="https://www.tekscan.com/dental" class="partners__item"><img src="<?php echo get_template_directory_uri().'/assets/images/partners/logo2.jpg'; ?>" alt=""></a>
+            <a href="http://ru.a-dec.com/en/Products/Dental-Chairs/Dental-Chairs/A-dec-500?sc_lang=en/" class="partners__item"><img src="<?php echo get_template_directory_uri().'/assets/images/partners/logo3.jpg'; ?>" alt=""></a>
+        </div>
+    </section>
 
     <!-- Testimonials -->
     <section class="section section-testimonials">

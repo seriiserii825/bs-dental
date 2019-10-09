@@ -38,18 +38,15 @@ function crb_attach_theme_options()
 		->add_tab(__('Block care'), array(
 			Field::make('text', 'crb_care_main_title_ru', __('Block care title ru')),
 			Field::make('text', 'crb_care_title_ru', __('Block care title ru')),
-			Field::make('text', 'crb_care_subtitle_ru', __('Block care subtitle ru')),
-			Field::make('textarea', 'crb_care_text_ru', __('Block care text ru')),
+			Field::make('text', 'crb_care_text_ru', __('Block care text ru')),
 
 			Field::make('text', 'crb_care_main_title_ro', __('Block care title ro')),
 			Field::make('text', 'crb_care_title_ro', __('Block care title ro')),
-			Field::make('text', 'crb_care_subtitle_ro', __('Block care subtitle ro')),
-			Field::make('textarea', 'crb_care_text_ro', __('Block care text ro')),
+			Field::make('text', 'crb_care_text_ro', __('Block care text ro')),
 
 			Field::make('text', 'crb_care_main_title_en', __('Block care title en')),
 			Field::make('text', 'crb_care_title_en', __('Block care title en')),
-			Field::make('text', 'crb_care_subtitle_en', __('Block care subtitle en')),
-			Field::make('textarea', 'crb_care_text_en', __('Block care text en')),
+			Field::make('text', 'crb_care_text_en', __('Block care text en')),
 		))
 		->add_tab(__('Block services'), array(
 			Field::make('image', 'crb_services_header_image', __('Block services header image'))
@@ -206,6 +203,13 @@ function crb_attach_theme_options()
 			Field::make('text', 'cb_taxonomy_title_ru', __('cb_taxonomy_title_ru'))
 				->set_width(30),
 			Field::make('text', 'cb_taxonomy_title_en', __('cb_taxonomy_title_en'))
+				->set_width(30),
+
+			Field::make( 'text', 'crb_page_intro_title_ro', __( 'crb_page_intro_title_ro' ) )
+				->set_width(30),
+			Field::make( 'text', 'crb_page_intro_title_ru', __( 'crb_page_intro_title_ru' ) )
+				->set_width(30),
+			Field::make( 'text', 'crb_page_intro_title_en', __( 'crb_page_intro_title_en' ) )
 				->set_width(30),
 		));
 	
