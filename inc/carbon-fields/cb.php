@@ -11,7 +11,7 @@ function crb_attach_theme_options()
 	$basic_options_container = Container::make('theme_options', __('Carbon Fields'))
 		->add_tab(__('Contacts'), array(
 			Field::make('text', 'crb_email', __('Email')),
-			
+
 			Field::make('text', 'crb_phone', __('Phone'))
 				->set_width(30),
 			Field::make('text', 'crb_phone2', __('Phone 2'))
@@ -75,6 +75,22 @@ function crb_attach_theme_options()
 
 			Field::make('text', 'crb_specialist_title_en', __('Block specialist title en')),
 			Field::make('text', 'crb_specialist_subtitle_en', __('Block specialist subtitle en')),
+		))
+		->add_tab(__('Partners'), array(
+			Field::make('text', 'crb_partner_title_ro', __('Block partner title ro'))
+			->set_width(30),
+			Field::make('text', 'crb_partner_title_ru', __('Block partner title ru'))
+			->set_width(30),
+			Field::make('text', 'crb_partner_title_en', __('Block partner title en'))
+			->set_width(30),
+
+			Field::make('complex', 'crb_partners', __('Partners'))
+				->add_fields(array(
+					Field::make('text', 'link', __('link')),
+					Field::make('image', 'image', __('Image'))
+					->set_value_type('url')
+				))
+				->set_layout('tabbed-horizontal'),
 		))
 		->add_tab(__('Latest Posts'), array(
 			Field::make('text', 'crb_latest_posts_title_ru', __('Block latest_posts title ru'))
@@ -190,14 +206,14 @@ function crb_attach_theme_options()
 				->set_width(30),
 			Field::make('text', 'button_know_en', __('button_know_en'))
 				->set_width(30),
-			
+
 			Field::make('text', 'button_all_doctors_ro', __('button_all_doctors_ro'))
 				->set_width(30),
 			Field::make('text', 'button_all_doctors_ru', __('button_all_doctors_ru'))
 				->set_width(30),
 			Field::make('text', 'button_all_doctors_en', __('button_all_doctors_en'))
 				->set_width(30),
-			
+
 			Field::make('text', 'cb_taxonomy_title_ro', __('cb_taxonomy_title_ro'))
 				->set_width(30),
 			Field::make('text', 'cb_taxonomy_title_ru', __('cb_taxonomy_title_ru'))

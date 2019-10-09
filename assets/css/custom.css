@@ -19934,8 +19934,9 @@ table {
 	.header {
 		display: block;
 	}
-	.phone {
-		display: none;
+	.header .phone {
+		float: none;
+		margin: 0;
 	}
 	.btn-menu {
 		right: 30px;
@@ -19961,6 +19962,15 @@ table {
 .partners__content a {
 	display: block;
 }
+
+.partners__item {
+	text-align: center;
+}
+
+.partners__content img {
+	height: 100px;
+}
+
 @media screen and (max-width: 978px) {
 	.partners__content {
 		display: block;
@@ -19991,9 +20001,50 @@ table {
 .sale-body .service-image {
 	margin-bottom: 30px;
 }
+.sale-category {
+	padding: 60px 15px;
+}
+.sale-category .sale__item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	padding: 20px;
+	background: #fff;
+}
+.sale-category .service-body {
+	margin-bottom: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.sale-category .service-body h6 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.sale-category .service-body p {
+	margin-bottom: 14px;
+	height: auto;
+}
+.sale-category .service-image {
+	flex: 0 0 300px;
+}
+.sale-category .sale__item.reverse .service-image {
+	order: 2;
+}
+.sale-category .sale__item.reverse .service-body {
+	order: 1;
+}
 @media screen and (max-width: 600px) {
 	.sale__header {
 		display: block;
 	}
 }
+@media screen and (max-width: 640px) {
+	.doctor {
+		margin: 0 auto 30px;
+		max-width: 400px;
+	}
+}
+
 

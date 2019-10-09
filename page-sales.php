@@ -45,7 +45,16 @@ if (!defined('ABSPATH')) exit;
                                         <h6 itemprop='alternateName'>
                                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                         </h6>
-                                        <div class="sale__taxonomy"><?php echo get_the_terms($post->ID, 'model')[0]->name; ?></div>
+                                        <div class="sale__taxonomy">
+                                            <?php
+                                                $term_id = get_the_terms($post->ID, 'model')[0]->term_id;
+                                                $term_name = get_the_terms($post->ID, 'model')[0]->name;
+                                            ?>
+
+                                            <a href="<?php echo $term_id; ?>">
+                                                <?php echo $term_name; ?>
+                                            </a>
+                                        </div>
                                     </header>
 
                                     <div class="service-image">

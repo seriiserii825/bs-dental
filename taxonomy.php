@@ -21,25 +21,32 @@ if (!defined('ABSPATH')) exit;
 <div class="main">
     <div class="section-services section-doctors section-doctors-alt" itemscope itemtype="http://schema.org/Product">
         <div class="row">
-            <div class="services-grid sale">
+            <div class="sale-category">
 				<?php if (have_posts()): ?>
-					<?php while (have_posts()): ?>
+					<?php $i = 1; while (have_posts()): ?>
+                        <?php if($i % 2 == 0): ?>
+                        <?php $reverse = 'reverse';  ?>
+                        <?php else: ?>
+							<?php $reverse = '';  ?>
+                        <?php endif; ?>
+
 						<?php the_post(); ?>
-                        <div class="service">
-                            <div class="service-box">
-                                <div class="service-image">
-									<?php echo kama_thumb_img('w=600'); ?>
-                                </div><!-- /.service-image -->
+                        <div class="sale__item <?php echo $reverse; ?>">
+                            <div class="service-image">
+								<?php echo kama_thumb_img('w=600'); ?>
+                            </div><!-- /.service-image -->
 
-                                <div class="service-body">
-                                    <h6 itemprop='alternateName'><?php the_title(); ?></h6>
-									
-									<?php the_content(); ?>
+                            <div class="service-body">
+                                <h6 itemprop='alternateName'><?php the_title(); ?></h6>
+                                <p itemprop='description'><?php echo carbon_get_the_post_meta('short_text' . get_lang()); ?></p>
 
-                                </div><!-- /.service-body -->
+                                <a href="<?php the_permalink(); ?>" class="link-more" item-prop='url'>
+                                    <i class="fa fa-plus"></i>
+		                            <?php echo carbon_get_theme_option('button_know'.get_lang()); ?>
+                                </a>
                             </div><!-- /.service-box -->
                         </div><!-- /.service -->
-					<?php endwhile; ?>
+					<?php $i++; endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 				<?php else: ?>
 				<?php endif; ?>

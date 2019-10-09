@@ -215,12 +215,13 @@ $page_front_id = 284;
 
     <section class="section partners">
         <div class="section-head">
-            <h2 class="h2-title"><span>Reprezentanți oficiali al companiilor</span></h2>
+            <h2 class="h2-title"><span><?php echo carbon_get_theme_option('crb_partner_title'.get_lang()); ?></span></h2>
         </div>
         <div class="partners__content">
-            <a href="http://bioresearchinc.com/" class="partners__item"><img src="<?php echo get_template_directory_uri().'/assets/images/partners/logo1.jpg'; ?>" alt=""></a>
-            <a href="https://www.tekscan.com/dental" class="partners__item"><img src="<?php echo get_template_directory_uri().'/assets/images/partners/logo2.jpg'; ?>" alt=""></a>
-            <a href="http://ru.a-dec.com/en/Products/Dental-Chairs/Dental-Chairs/A-dec-500?sc_lang=en/" class="partners__item"><img src="<?php echo get_template_directory_uri().'/assets/images/partners/logo3.jpg'; ?>" alt=""></a>
+            <?php $partners = carbon_get_theme_option('crb_partners'); ?>
+            <?php foreach($partners as $partner): ?>
+                <a href="<?php echo $partner['link']; ?>" class="partners__item" target="_blank"><img src="<?php echo $partner['image']; ?>" alt=""></a>
+            <?php endforeach; ?>
         </div>
     </section>
 
