@@ -78,17 +78,17 @@ function crb_attach_theme_options()
 		))
 		->add_tab(__('Partners'), array(
 			Field::make('text', 'crb_partner_title_ro', __('Block partner title ro'))
-			->set_width(30),
+				->set_width(30),
 			Field::make('text', 'crb_partner_title_ru', __('Block partner title ru'))
-			->set_width(30),
+				->set_width(30),
 			Field::make('text', 'crb_partner_title_en', __('Block partner title en'))
-			->set_width(30),
+				->set_width(30),
 
 			Field::make('complex', 'crb_partners', __('Partners'))
 				->add_fields(array(
 					Field::make('text', 'link', __('link')),
 					Field::make('image', 'image', __('Image'))
-					->set_value_type('url')
+						->set_value_type('url')
 				))
 				->set_layout('tabbed-horizontal'),
 		))
@@ -122,6 +122,11 @@ function crb_attach_theme_options()
 
 			Field::make('text', 'crb_index_form_title_en', __('Block index_form title en')),
 			Field::make('text', 'crb_index_form_subtitle_en', __('Block index_form subtitle en')),
+		))
+		->add_tab(__('Testimonials'), array(
+			Field::make('text', 'crb_testimonials_title_ro', __('Block testimonials title ro')),
+			Field::make('text', 'crb_testimonials_title_ru', __('Block testimonials title ru')),
+			Field::make('text', 'crb_testimonials_title_en', __('Block testimonials title en')),
 		));
 
 	// Add second options page under 'Basic Options'
@@ -196,7 +201,7 @@ function crb_attach_theme_options()
 				))
 				->set_layout('tabbed-horizontal')
 		));
-	
+
 	Container::make('theme_options', 'Buttons')
 		->set_page_parent($basic_options_container)// reference to a top level container
 		->add_fields(array(
@@ -221,14 +226,14 @@ function crb_attach_theme_options()
 			Field::make('text', 'cb_taxonomy_title_en', __('cb_taxonomy_title_en'))
 				->set_width(30),
 
-			Field::make( 'text', 'crb_page_intro_title_ro', __( 'crb_page_intro_title_ro' ) )
+			Field::make('text', 'crb_page_intro_title_ro', __('crb_page_intro_title_ro'))
 				->set_width(30),
-			Field::make( 'text', 'crb_page_intro_title_ru', __( 'crb_page_intro_title_ru' ) )
+			Field::make('text', 'crb_page_intro_title_ru', __('crb_page_intro_title_ru'))
 				->set_width(30),
-			Field::make( 'text', 'crb_page_intro_title_en', __( 'crb_page_intro_title_en' ) )
+			Field::make('text', 'crb_page_intro_title_en', __('crb_page_intro_title_en'))
 				->set_width(30),
 		));
-	
+
 }
 
 

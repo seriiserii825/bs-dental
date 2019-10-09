@@ -229,10 +229,7 @@ $page_front_id = 284;
     <section class="section section-testimonials">
         <header class="section-head">
             <i class="fa fa-quote-left"></i>
-
-            <h2><?php echo esc_html__('What our patients have to say', 'bs-dental') ?></h2>
-
-            <h6><?php echo esc_html__('We are reliable &amp; Trusted', 'bs-dental') ?></h6>
+            <h2><?php echo carbon_get_theme_option('crb_testimonials_title'.get_lang()); ?></h2>
         </header><!-- /.section-head -->
 
 		<?php $testimonials = new WP_Query([
