@@ -20035,6 +20035,12 @@ table {
 .sale-category .sale__item.reverse .service-body {
 	order: 1;
 }
+@media screen and (max-width: 500px) {
+	.service-image a {
+		height: auto;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.sale__header {
 		display: block;
