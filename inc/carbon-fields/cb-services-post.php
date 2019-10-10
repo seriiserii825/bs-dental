@@ -12,7 +12,15 @@ function crb_services_post_options() {
 			'value' => 'services',
 			'taxonomy' => 'category',
 		) )
+		->add_tab( __( 'Show on main' ), array(
+			Field::make( 'radio', 'crb_services_post_radio', __( 'Choose Option' ) )
+				->set_options( array(
+					'hide' => 'hide on main',
+					'show' => 'show on main',
+				) ),
+		))
 		->add_tab( __( 'Main Page Short Text' ), array(
+
 			Field::make( 'image', 'crb_services_post_image', __( 'Image' ) )
 			->set_help_text('1920x340')
 			->set_value_type('url'),

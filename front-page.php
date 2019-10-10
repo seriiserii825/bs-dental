@@ -35,7 +35,7 @@ $page_front_id = 284;
                                         <span><?php the_title(); ?></span>
                                     </h1>
                                     <p class="mobile-hidden">
-                                        <a href="<?php echo get_page_link(262); ?>"><?php echo carbon_get_the_post_meta('crb_slider_text'.get_lang()); ?></a>
+                                        <a href="<?php echo get_page_link(262); ?>"><?php echo carbon_get_the_post_meta('crb_slider_text' . get_lang()); ?></a>
                                     </p>
                                 </div><!-- /.slide-caption-inner -->
                             </div><!-- /.slide-caption -->
@@ -94,28 +94,28 @@ $page_front_id = 284;
                     <p class="section-features__text"><?php echo carbon_get_theme_option('crb_care_text' . get_lang()); ?></p>
 
                     <ul class="section-information__list list-features" itemscope itemtype="http://schema.org/Product">
-		                <?php $technologies_posts = new WP_Query([
-			                'posts_per_page' => 6,
-			                'post_type' => 'technologies'
-		                ]); ?>
-		                <?php if ($technologies_posts->have_posts()): ?>
-			                <?php while ($technologies_posts->have_posts()): ?>
-				                <?php $technologies_posts->the_post(); ?>
+						<?php $technologies_posts = new WP_Query([
+							'posts_per_page' => 6,
+							'post_type' => 'technologies'
+						]); ?>
+						<?php if ($technologies_posts->have_posts()): ?>
+							<?php while ($technologies_posts->have_posts()): ?>
+								<?php $technologies_posts->the_post(); ?>
                                 <li>
                                     <p itemprop="name">
                                         <a href="<?php the_permalink(); ?>"><i class="fa fa-plus"></i>
-							                <?php the_title(); ?></a>
+											<?php the_title(); ?></a>
                                     </p>
                                 </li>
-			                <?php endwhile; ?>
-			                <?php wp_reset_postdata(); ?>
-		                <?php else: ?>
-		                <?php endif; ?>
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php else: ?>
+						<?php endif; ?>
 
                     </ul><!-- /.list-features -->
 
                     <a href="<?php echo get_page_link(356); ?>" class="button button--left btn-white btn-small">
-		                <?php echo carbon_get_theme_option('button_know'.get_lang());?>
+						<?php echo carbon_get_theme_option('button_know' . get_lang()); ?>
                     </a>
 
                 </section><!-- /.section-about-us -->
@@ -151,7 +151,7 @@ $page_front_id = 284;
                     </ul><!-- /.list-features -->
 
                     <a href="<?php echo get_category_link(11); ?>" class="button btn-white btn-small">
-	                    <?php echo carbon_get_theme_option('button_know'.get_lang());?>
+						<?php echo carbon_get_theme_option('button_know' . get_lang()); ?>
                     </a>
                 </section><!-- /.section-features -->
             </div><!-- /.columns large-6 -->
@@ -196,7 +196,7 @@ $page_front_id = 284;
 
                                 <a href="<?php the_permalink(); ?>" class="link-more">
                                     <i class="fa fa-plus"></i>
-	                                <?php echo carbon_get_theme_option('button_know'.get_lang());?>
+									<?php echo carbon_get_theme_option('button_know' . get_lang()); ?>
                                 </a>
                             </div><!-- /.doctor-box -->
                         </div><!-- /.doctor -->
@@ -209,19 +209,51 @@ $page_front_id = 284;
         </div><!-- /.row -->
 
         <div class="section-actions">
-            <a href="<?php echo get_page_link(505); ?>" class="button btn-grey btn-small"><?php echo carbon_get_theme_option('button_all_doctors'.get_lang()); ?></a>
+            <a href="<?php echo get_page_link(505); ?>"
+               class="button btn-grey btn-small"><?php echo carbon_get_theme_option('button_all_doctors' . get_lang()); ?></a>
         </div><!-- /.section-actions -->
     </section><!-- /.section-doctors -->
 
+    <section class="section section-services">
+        <h2 class="section__title">Zîmbetul Vostru – Prioritatea Noastră !</h2>
+
+		<?php $services__posts = new WP_Query([
+			'posts_per_page' => -1,
+			'category_name' => 'services',
+		]); ?>
+        <div class="post-wrap">
+			<?php if ($services__posts->have_posts()): ?>
+				<?php while ($services__posts->have_posts()): ?>
+					<?php $services__posts->the_post(); ?>
+					<?php $show_on_main = carbon_get_the_post_meta('crb_services_post_radio'); ?>
+					<?php if ($show_on_main == 'show'): ?>
+                        <div class="post-item">
+                            <div class="post-item-wrap">
+                                <a href="<?php the_permalink(); ?>" class="post-link">
+                                    <h3 class="post-title"><?php the_title(); ?></h3>
+                                    <p class="post-content"><?php echo carbon_get_the_post_meta('crb_services_post_short_text' . get_lang()); ?></p>
+                                </a>
+                            </div>
+                        </div>
+					<?php endif; ?>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			<?php else: ?>
+			<?php endif; ?>
+        </div>
+    </section>
+
     <section class="section partners">
         <div class="section-head">
-            <h2 class="h2-title"><span><?php echo carbon_get_theme_option('crb_partner_title'.get_lang()); ?></span></h2>
+            <h2 class="h2-title"><span><?php echo carbon_get_theme_option('crb_partner_title' . get_lang()); ?></span>
+            </h2>
         </div>
         <div class="partners__content">
-            <?php $partners = carbon_get_theme_option('crb_partners'); ?>
-            <?php foreach($partners as $partner): ?>
-                <a href="<?php echo $partner['link']; ?>" class="partners__item" target="_blank"><img src="<?php echo $partner['image']; ?>" alt=""></a>
-            <?php endforeach; ?>
+			<?php $partners = carbon_get_theme_option('crb_partners'); ?>
+			<?php foreach ($partners as $partner): ?>
+                <a href="<?php echo $partner['link']; ?>" class="partners__item" target="_blank"><img
+                            src="<?php echo $partner['image']; ?>" alt=""></a>
+			<?php endforeach; ?>
         </div>
     </section>
 
@@ -229,7 +261,7 @@ $page_front_id = 284;
     <section class="section section-testimonials">
         <header class="section-head">
             <i class="fa fa-quote-left"></i>
-            <h2><?php echo carbon_get_theme_option('crb_testimonials_title'.get_lang()); ?></h2>
+            <h2><?php echo carbon_get_theme_option('crb_testimonials_title' . get_lang()); ?></h2>
         </header><!-- /.section-head -->
 
 		<?php $testimonials = new WP_Query([
@@ -292,7 +324,7 @@ $page_front_id = 284;
 				<?php if ($recent_news->have_posts()): ?>
 					<?php while ($recent_news->have_posts()): ?>
 						<?php $recent_news->the_post(); ?>
-                        <?php $first_post_id = get_the_ID(); ?>
+						<?php $first_post_id = get_the_ID(); ?>
                         <div class="event">
 
                             <div class="event-date">
@@ -318,7 +350,7 @@ $page_front_id = 284;
 
                                     <a href="<?php the_permalink(); ?>" class="link-more">
                                         <i class="fa fa-plus"></i>
-	                                    <?php echo carbon_get_theme_option('button_know'.get_lang());?>
+										<?php echo carbon_get_theme_option('button_know' . get_lang()); ?>
                                     </a>
                                 </div><!-- /.event-entry -->
                             </div><!-- /.event-box -->
@@ -335,7 +367,7 @@ $page_front_id = 284;
 			$recent_news = new WP_Query([
 				'category_name' => 'recent-news',
 				'posts_per_page' => 5,
-                'post__not_in' => [$first_post_id]
+				'post__not_in' => [$first_post_id]
 			]);
 			?>
             <div class="column large-6 medium-6">
@@ -343,15 +375,15 @@ $page_front_id = 284;
 					<?php if ($recent_news->have_posts()): ?>
 						<?php while ($recent_news->have_posts()): ?>
 							<?php $recent_news->the_post(); ?>
-                                <li>
-                                    <a href="<?php the_permalink(); ?>">
+                            <li>
+                                <a href="<?php the_permalink(); ?>">
 								<span class="image">
                                     <?php echo kama_thumb_img('w=270 &h=177'); ?>
 								</span>
-                                        <span class="title"><?php the_title(); ?></span>
-                                    </a>
-                                </li>
-							<?php endwhile; ?>
+                                    <span class="title"><?php the_title(); ?></span>
+                                </a>
+                            </li>
+						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
 					<?php else: ?>
 					<?php endif; ?>
@@ -360,8 +392,9 @@ $page_front_id = 284;
         </div><!-- /.row -->
 
         <div class="section-actions">
-            <a href="<?php echo get_category_link(15); ?>" class="button btn-light-blue btn-small"><?php echo esc_html__( 'More news', 'bs-dental' )
-             ?></a>
+            <a href="<?php echo get_category_link(15); ?>"
+               class="button btn-light-blue btn-small"><?php echo esc_html__('More news', 'bs-dental')
+				?></a>
         </div><!-- /.section-actions -->
     </section><!-- /.section-updates -->
 </div><!-- /.main -->
