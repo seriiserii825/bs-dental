@@ -22,6 +22,10 @@
 					'depth' => 0,
 					'walker' => '',]); ?>
 
+                <div class="facebook-widget">
+                    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fiovudent&amp;width=308&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=false&amp;appId=136967469714221" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:308px; height:290px;" allowtransparency="true"></iframe>
+                </div>
+
             </div>
             <div class="footer__item">
                 <div class="map">
@@ -82,6 +86,7 @@
         <!-- /.copyright -->
     </div><!-- /.row -->
 </div><!-- /.wrapper -->
+
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -12809,6 +12809,7 @@ a.logo:hover {
 }
 
 .list-features a {
+	font-size: 14px;
 	color: #ffffff;
 	transition: all 0.6s ease;
 }
@@ -20102,9 +20103,11 @@ table {
 	padding: 30px;
 }
 .section-services .post-title {
+	height: 50px;
 	color: #33261D;
 	margin-bottom: 15px;
 	transition: .3s ease-in-out;
+	overflow: hidden;
 }
 .section-services .post-item-wrap:hover .post-title {
 	color: #00A3C7;

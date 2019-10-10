@@ -123,6 +123,14 @@ function crb_attach_theme_options()
 			Field::make('text', 'crb_index_form_title_en', __('Block index_form title en')),
 			Field::make('text', 'crb_index_form_subtitle_en', __('Block index_form subtitle en')),
 		))
+		->add_tab(__('Services on main'), array(
+			Field::make('text', 'crb_services_block_title_ro', __('Block services_block title ro'))
+			->set_width(30),
+			Field::make('text', 'crb_services_block_title_ru', __('Block services_block title ru'))
+			->set_width(30),
+			Field::make('text', 'crb_services_block_title_en', __('Block services_block title en'))
+			->set_width(30),
+		))
 		->add_tab(__('Testimonials'), array(
 			Field::make('text', 'crb_testimonials_title_ro', __('Block testimonials title ro')),
 			Field::make('text', 'crb_testimonials_title_ru', __('Block testimonials title ru')),

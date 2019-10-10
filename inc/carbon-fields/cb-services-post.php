@@ -18,6 +18,12 @@ function crb_services_post_options() {
 					'hide' => 'hide on main',
 					'show' => 'show on main',
 				) ),
+
+			Field::make( 'radio', 'crb_services_post_info_radio', __( 'Show on main in info block with short title' ) )
+				->set_options( array(
+					'hide' => 'hide on main',
+					'show' => 'show on main',
+				) ),
 		))
 		->add_tab( __( 'Main Page Short Text' ), array(
 

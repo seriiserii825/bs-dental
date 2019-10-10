@@ -129,18 +129,21 @@ $page_front_id = 284;
 
                     <ul class="section-information__list list-features" itemscope itemtype="http://schema.org/Product">
 						<?php $services_posts = new WP_Query([
-							'posts_per_page' => 6,
+							'posts_per_page' => -1,
 							'category_name' => 'services'
 						]); ?>
 						<?php if ($services_posts->have_posts()): ?>
 							<?php while ($services_posts->have_posts()): ?>
 								<?php $services_posts->the_post(); ?>
-                                <li>
-                                    <p itemprop="name">
-                                        <a href="<?php the_permalink(); ?>"><i class="fa fa-plus"></i>
-											<?php the_title(); ?></a>
-                                    </p>
-                                </li>
+								<?php $show_on_main = carbon_get_the_post_meta('crb_services_post_info_radio'); ?>
+								<?php if ($show_on_main == 'show'): ?>
+                                    <li>
+                                        <p itemprop="name">
+                                            <a href="<?php the_permalink(); ?>"><i class="fa fa-plus"></i>
+												<?php the_title(); ?></a>
+                                        </p>
+                                    </li>
+								<?php endif; ?>
 							<?php endwhile; ?>
 							<?php wp_reset_postdata(); ?>
 						<?php else: ?>
@@ -213,7 +216,7 @@ $page_front_id = 284;
     </section><!-- /.section-doctors -->
 
     <section class="section section-services">
-        <h2 class="section__title">Zîmbetul Vostru – Prioritatea Noastră !</h2>
+        <h2 class="section__title"><?php echo carbon_get_theme_option('crb_services_block_title'.get_lang()); ?></h2>
 
 		<?php $services__posts = new WP_Query([
 			'posts_per_page' => -1,
