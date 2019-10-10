@@ -12262,7 +12262,7 @@ a.logo:hover {
 
 .sub-menu a {
 	font-size: 14px;
-	line-height: 3;
+	line-height: 1;
 	font-weight: 700;
 	color: #c0cfe0;
 }
@@ -12762,7 +12762,7 @@ a.logo:hover {
 .section-features {
 	position: relative;
 	min-height: 440px;
-	padding: 60px 0 0 56px;
+	padding: 60px;
 }
 
 .section-features h6 {
@@ -14173,7 +14173,7 @@ a.logo:hover {
 .list-work-times p span {
 	float: left;
 	line-height: 3.2;
-	color: #c2cfde;
+	color: #ffffff;
 }
 
 .list-work-times p span + span {
@@ -14181,7 +14181,7 @@ a.logo:hover {
 	margin-top: 2px;
 	font-size: 14px;
 	line-height: 3.43;
-	color: #ffffff;
+	color: #c2cfde;
 }
 
 .footer p {
@@ -19814,15 +19814,14 @@ table {
 
 
 .footer .list-links {
-	column-count: auto;
+	column-count: 2;
 }
 
 .footer .list-links a {
 	text-transform: none;
 }
 .footer .list-work-times {
-	position: relative;
-	top: 10px;
+	padding-left: 20px;
 }
 .footer-contacts-list li p {
 	display: grid;

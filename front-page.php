@@ -89,8 +89,6 @@ $page_front_id = 284;
 
                     <h2><?php echo carbon_get_theme_option('crb_care_title' . get_lang()); ?></h2>
 
-                    <h3><?php echo carbon_get_theme_option('crb_care_subtitle' . get_lang()); ?></h3>
-
                     <p class="section-features__text"><?php echo carbon_get_theme_option('crb_care_text' . get_lang()); ?></p>
 
                     <ul class="section-information__list list-features" itemscope itemtype="http://schema.org/Product">

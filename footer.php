@@ -21,23 +21,12 @@
 					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 					'depth' => 0,
 					'walker' => '',]); ?>
+
             </div>
             <div class="footer__item">
-                <h5><?php echo esc_html__('Opening Hours', 'bs-dental') ?></h5>
-
-                <ul class="list-work-times">
-					<?php $footer_hours = carbon_get_theme_option('crb_footer_hours'); ?>
-					<?php foreach ($footer_hours as $item): ?>
-                        <li>
-                            <p>
-                                <span><?php echo $item['days' . get_lang()]; ?></span>
-
-                                <span><?php echo $item['hours']; ?></span>
-                            </p>
-                        </li>
-					<?php endforeach; ?>
-
-                </ul><!-- /.list-work-times -->
+                <div class="map">
+                    <?php echo do_shortcode('[yamap center="46.9524,28.7706" height="22rem" controls="" zoom="15" type="yandex#map" mobiledrag="0"][yaplacemark  coord="46.9524,28.7706" icon="islands#dotIcon" color="#1e98ff"][/yamap]'); ?>
+                </div>
             </div>
             <div class="footer__item">
                 <h5><?php echo esc_html__('Contact Us', 'bs-dental') ?></h5>
@@ -68,6 +57,22 @@
 
                     </li>
                 </ul>
+<!--                <h5>--><?php //echo esc_html__('Opening Hours', 'bs-dental') ?><!--</h5>-->
+
+                <ul class="list-work-times">
+		            <?php $footer_hours = carbon_get_theme_option('crb_footer_hours'); ?>
+		            <?php foreach ($footer_hours as $item): ?>
+                        <li>
+                            <p>
+                                <span><?php echo $item['days' . get_lang()]; ?></span>
+
+                                <span><?php echo $item['hours']; ?></span>
+                            </p>
+                        </li>
+		            <?php endforeach; ?>
+
+                </ul><!-- /.list-work-times -->
+
             </div>
         </div>
     </div><!-- /.row -->
