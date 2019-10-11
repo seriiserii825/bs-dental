@@ -53,17 +53,28 @@ function crb_attach_theme_options()
 				->set_help_text('1920x340')
 				->set_value_type('url'),
 
-			Field::make('text', 'crb_services_title_ru', __('Block services title ru')),
-			Field::make('text', 'crb_services_subtitle_ru', __('Block services subtitle ru')),
-			Field::make('textarea', 'crb_services_text_ru', __('Block services text ru')),
+			Field::make('text', 'crb_services_title_ro', __('Block services title ro'))
+			->set_width(30),
+			Field::make('text', 'crb_services_title_ru', __('Block services title ru'))
+			->set_width(30),
+			Field::make('text', 'crb_services_title_en', __('Block services title en'))
+			->set_width(30),
 
-			Field::make('text', 'crb_services_title_ro', __('Block services title ro')),
-			Field::make('text', 'crb_services_subtitle_ro', __('Block services subtitle ro')),
-			Field::make('textarea', 'crb_services_text_ro', __('Block services text ro')),
+			Field::make('text', 'crb_services_subtitle_ro', __('Block services subtitle ro'))
+			->set_width(30),
+			Field::make('text', 'crb_services_subtitle_ru', __('Block services subtitle ru'))
+			->set_width(30),
+			Field::make('text', 'crb_services_subtitle_en', __('Block services subtitle en'))
+			->set_width(30),
 
-			Field::make('text', 'crb_services_title_en', __('Block services title en')),
-			Field::make('text', 'crb_services_subtitle_en', __('Block services subtitle en')),
-			Field::make('textarea', 'crb_services_text_en', __('Block services text en')),
+			Field::make('textarea', 'crb_services_text_ro', __('Block services text ro'))
+			->set_width(30),
+			Field::make('textarea', 'crb_services_text_ru', __('Block services text ru'))
+			->set_width(30),
+			Field::make('textarea', 'crb_services_text_en', __('Block services text en'))
+			->set_width(30),
+
+			Field::make('textarea', 'crb_facebook_iframe', __('Facebook iframe'))
 
 		))
 		->add_tab(__('Block specialists'), array(

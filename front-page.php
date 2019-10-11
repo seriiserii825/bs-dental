@@ -125,35 +125,9 @@ $page_front_id = 284;
 
                     <h2><?php echo carbon_get_theme_option('crb_services_subtitle' . get_lang()); ?></h2>
 
-                    <p class="section-features__text"><?php echo carbon_get_theme_option('crb_services_text' . get_lang()); ?></p>
-
-                    <ul class="section-information__list list-features" itemscope itemtype="http://schema.org/Product">
-						<?php $services_posts = new WP_Query([
-							'posts_per_page' => -1,
-							'category_name' => 'services'
-						]); ?>
-						<?php if ($services_posts->have_posts()): ?>
-							<?php while ($services_posts->have_posts()): ?>
-								<?php $services_posts->the_post(); ?>
-								<?php $show_on_main = carbon_get_the_post_meta('crb_services_post_info_radio'); ?>
-								<?php if ($show_on_main == 'show'): ?>
-                                    <li>
-                                        <p itemprop="name">
-                                            <a href="<?php the_permalink(); ?>"><i class="fa fa-plus"></i>
-												<?php the_title(); ?></a>
-                                        </p>
-                                    </li>
-								<?php endif; ?>
-							<?php endwhile; ?>
-							<?php wp_reset_postdata(); ?>
-						<?php else: ?>
-						<?php endif; ?>
-
-                    </ul><!-- /.list-features -->
-
-                    <a href="<?php echo get_category_link(11); ?>" class="button btn-white btn-small">
-						<?php echo carbon_get_theme_option('button_know' . get_lang()); ?>
-                    </a>
+                    <div class="facebook-widget">
+                        <?php echo carbon_get_theme_option('crb_facebook_iframe'); ?>
+                    </div>
                 </section><!-- /.section-features -->
             </div><!-- /.columns large-6 -->
         </div><!-- /.row -->
@@ -173,7 +147,7 @@ $page_front_id = 284;
 
         <div class="row">
 			<?php $specialist = new WP_Query([
-				'posts_per_page' => 3,
+				'posts_per_page' => 6,
 				'post_type' => 'specialist'
 			]); ?>
 
@@ -190,10 +164,6 @@ $page_front_id = 284;
 										<?php echo kama_thumb_img('w=367 &crop=top') ?>
                                     </a>
                                 </div>
-
-                                <div class="doctor-body">
-									<?php the_content(); ?>
-                                </div><!-- /.doctor-body -->
 
                                 <a href="<?php the_permalink(); ?>" class="link-more">
                                     <i class="fa fa-plus"></i>

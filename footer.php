@@ -22,14 +22,11 @@
 					'depth' => 0,
 					'walker' => '',]); ?>
 
-                <div class="facebook-widget">
-                    <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fiovudent&amp;width=308&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=false&amp;appId=136967469714221" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:308px; height:290px;" allowtransparency="true"></iframe>
-                </div>
 
             </div>
             <div class="footer__item">
                 <div class="map">
-                    <?php echo do_shortcode('[yamap center="46.9524,28.7706" height="22rem" controls="" zoom="15" type="yandex#map" mobiledrag="0"][yaplacemark  coord="46.9524,28.7706" icon="islands#dotIcon" color="#1e98ff"][/yamap]'); ?>
+					<?php echo do_shortcode('[yamap center="46.9524,28.7706" height="22rem" controls="" zoom="15" type="yandex#map" mobiledrag="0"][yaplacemark  coord="46.9524,28.7706" icon="islands#dotIcon" color="#1e98ff"][/yamap]'); ?>
                 </div>
             </div>
             <div class="footer__item">
@@ -45,7 +42,7 @@
                     <li>
                         <p>
                             <span class="footer-contacts-list__title"><?php echo esc_html__('Phone', 'bs-dental') ?> : </span>
-                            <span >
+                            <span>
                             <a href="tel:<?php echo clear_phone(carbon_get_theme_option('crb_phone')) ?>"><?php echo carbon_get_theme_option('crb_phone') ?></a>
                             <a href="tel:<?php echo clear_phone(carbon_get_theme_option('crb_phone2')) ?>"><?php echo carbon_get_theme_option('crb_phone2') ?></a>
                             <a href="tel:<?php echo clear_phone(carbon_get_theme_option('crb_phone3')) ?>"><?php echo carbon_get_theme_option('crb_phone3') ?></a>
@@ -61,11 +58,11 @@
 
                     </li>
                 </ul>
-<!--                <h5>--><?php //echo esc_html__('Opening Hours', 'bs-dental') ?><!--</h5>-->
+                <!--                <h5>--><?php //echo esc_html__('Opening Hours', 'bs-dental') ?><!--</h5>-->
 
                 <ul class="list-work-times">
-		            <?php $footer_hours = carbon_get_theme_option('crb_footer_hours'); ?>
-		            <?php foreach ($footer_hours as $item): ?>
+					<?php $footer_hours = carbon_get_theme_option('crb_footer_hours'); ?>
+					<?php foreach ($footer_hours as $item): ?>
                         <li>
                             <p>
                                 <span><?php echo $item['days' . get_lang()]; ?></span>
@@ -73,7 +70,7 @@
                                 <span><?php echo $item['hours']; ?></span>
                             </p>
                         </li>
-		            <?php endforeach; ?>
+					<?php endforeach; ?>
 
                 </ul><!-- /.list-work-times -->
 
@@ -82,11 +79,19 @@
     </div><!-- /.row -->
 
     <div class="row">
-        <p class="copyright"><?php echo carbon_get_theme_option('crb_footer_copyright_text'.get_lang()); ?></p>
+        <p class="copyright"><?php echo carbon_get_theme_option('crb_footer_copyright_text' . get_lang()); ?></p>
         <!-- /.copyright -->
     </div><!-- /.row -->
 </div><!-- /.wrapper -->
 
 <?php wp_footer(); ?>
+<?php if(get_lang() === '_ro'): ?>
+    <script src="//code.jivosite.com/widget.js" data-jv-id="ZnMxayXOJj" async></script>
+<?php elseif(get_lang() === '_ru'): ?>
+    <script src="//code.jivosite.com/widget.js" data-jv-id="JnSEAmQ9Mx" async></script>
+<?php else: ?>
+    <script src="//code.jivosite.com/widget.js" data-jv-id="ccsCceyaHX" async></script>
+<?php endif; ?>
+
 </body>
 </html>
