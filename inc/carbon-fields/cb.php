@@ -29,8 +29,12 @@ function crb_attach_theme_options()
 
 			Field::make('image', 'crb_contacts_page_bg', __('Page image'))
 				->set_help_text('1920x340')
-				->set_value_type('url')
+				->set_value_type('url'),
+
+			Field::make('separator', 'crb_facebook_sep', __('Facebook')),
+			Field::make('textarea', 'crb_facebook_field', __('Facebook field'))
 		));
+
 
 	// Add second options page under 'Basic Options'
 	Container::make('theme_options', 'Blocks')
