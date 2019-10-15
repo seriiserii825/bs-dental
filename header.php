@@ -7,7 +7,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php echo carbon_get_theme_option('crb_facebook_field'); ?>
+<?php //echo carbon_get_theme_option('crb_facebook_field'); ?>
 
 <div class="wrapper">
     <header class="header">
@@ -50,9 +50,10 @@
                 <i class="fa fa-mobile"></i>
                 <small><?php echo esc_html__('Call Us', 'bs-dental') ?></small>
 				<?php
-				$phone = carbon_get_theme_option('crb_phone');
+                    $phone = carbon_get_theme_option('crb_phone');
 				?>
                 <a href='tel:<?php echo clear_phone($phone); ?>'><?php echo $phone; ?></a>
             </p><!-- /.phone -->
         </div><!-- /.columns large-3 -->
 </div>
+
