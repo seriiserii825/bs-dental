@@ -12,9 +12,9 @@ if (!defined('ABSPATH')) exit;
 
     <div class="row">
         <div class="intro-caption">
-            <h5><?php echo esc_html__('Check Our', 'bs-dental') ?></h5>
+            <h5><?php echo carbon_get_theme_option('crb_technologies_page_title'.get_lang()); ?></h5>
 
-            <h2><?php echo esc_html__('Technologies', 'bs-dental') ?></h2>
+            <h2><?php echo carbon_get_theme_option('crb_technologies_page_subtitle'.get_lang()); ?></h2>
         </div><!-- /.intro-caption -->
     </div><!-- /.row -->
 </div><!-- /.intro intro-small -->

@@ -142,6 +142,63 @@ function crb_attach_theme_options()
 			Field::make('text', 'crb_services_block_title_en', __('Block services_block title en'))
 			->set_width(30),
 		))
+		->add_tab(__('Page intro'), array(
+			Field::make('text', 'crb_technologies_page_title_ro', __('Block technologies_page title ro'))
+				->set_width(30),
+			Field::make('text', 'crb_technologies_page_title_ru', __('Block technologies_page title ru'))
+				->set_width(30),
+			Field::make('text', 'crb_technologies_page_title_en', __('Block technologies_page title en'))
+				->set_width(30),
+
+			Field::make('text', 'crb_technologies_page_subtitle_ro', __('Block technologies_page subtitle ro'))
+				->set_width(30),
+			Field::make('text', 'crb_technologies_page_subtitle_ru', __('Block technologies_page subtitle ru'))
+				->set_width(30),
+			Field::make('text', 'crb_technologies_page_subtitle_en', __('Block technologies_page subtitle en'))
+				->set_width(30),
+
+			Field::make('text', 'crb_category_services_title_ro', __('Block category_services title ro'))
+				->set_width(30),
+			Field::make('text', 'crb_category_services_title_ru', __('Block category_services title ru'))
+				->set_width(30),
+			Field::make('text', 'crb_category_services_title_en', __('Block category_services title en'))
+				->set_width(30),
+
+			Field::make('text', 'crb_category_services_subtitle_ro', __('Block category_services subtitle ro'))
+				->set_width(30),
+			Field::make('text', 'crb_category_services_subtitle_ru', __('Block category_services subtitle ru'))
+				->set_width(30),
+			Field::make('text', 'crb_category_services_subtitle_en', __('Block category_services subtitle en'))
+				->set_width(30),
+
+			Field::make('text', 'crb_page_tariff_title_ro', __('Block page_tariff title ro'))
+				->set_width(30),
+			Field::make('text', 'crb_page_tariff_title_ru', __('Block page_tariff title ru'))
+				->set_width(30),
+			Field::make('text', 'crb_page_tariff_title_en', __('Block page_tariff title en'))
+				->set_width(30),
+
+			Field::make('text', 'crb_page_tariff_subtitle_ro', __('Block page_tariff subtitle ro'))
+				->set_width(30),
+			Field::make('text', 'crb_page_tariff_subtitle_ru', __('Block page_tariff subtitle ru'))
+				->set_width(30),
+			Field::make('text', 'crb_page_tariff_subtitle_en', __('Block page_tariff subtitle en'))
+				->set_width(30),
+
+			Field::make('text', 'crb_page_contacts_title_ro', __('Block page_contacts title ro'))
+				->set_width(30),
+			Field::make('text', 'crb_page_contacts_title_ru', __('Block page_contacts title ru'))
+				->set_width(30),
+			Field::make('text', 'crb_page_contacts_title_en', __('Block page_contacts title en'))
+				->set_width(30),
+
+			Field::make('text', 'crb_page_contacts_subtitle_ro', __('Block page_contacts subtitle ro'))
+				->set_width(30),
+			Field::make('text', 'crb_page_contacts_subtitle_ru', __('Block page_contacts subtitle ru'))
+				->set_width(30),
+			Field::make('text', 'crb_page_contacts_subtitle_en', __('Block page_contacts subtitle en'))
+				->set_width(30),
+		))
 		->add_tab(__('Testimonials'), array(
 			Field::make('text', 'crb_testimonials_title_ro', __('Block testimonials title ro')),
 			Field::make('text', 'crb_testimonials_title_ru', __('Block testimonials title ru')),

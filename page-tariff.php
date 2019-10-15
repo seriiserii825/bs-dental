@@ -12,9 +12,9 @@ get_header();
 
         <div class="row">
             <div class="intro-caption">
-                <h5><?php echo esc_html__('Say hello!', 'bs-dental') ?></h5>
+                <h5><?php echo carbon_get_theme_option('crb_page_tariff_title'.get_lang()); ?></h5>
 
-                <h2><?php the_title(); ?></h2>
+                <h2><?php echo carbon_get_theme_option('crb_page_tariff_subtitle'.get_lang()); ?></h2>
             </div><!-- /.intro-caption -->
         </div><!-- /.row -->
     </div><!-- /.intro intro-small -->
