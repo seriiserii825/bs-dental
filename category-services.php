@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) exit;
 </div><!-- /.intro intro-small -->
 
 <div class="main">
-    <div class="section-services section-doctors section-doctors-alt" itemscope itemtype="http://schema.org/Product">
+    <div class="section-services section-white section-doctors section-doctors-alt" itemscope itemtype="http://schema.org/Product">
         <div class="row">
             <div class="services-grid">
 
