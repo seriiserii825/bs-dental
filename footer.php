@@ -85,13 +85,13 @@
 </div><!-- /.wrapper -->
 
 <?php wp_footer(); ?>
-<?php //if(get_lang() === '_ro'): ?>
-<!--    <script src="//code.jivosite.com/widget.js" data-jv-id="ZnMxayXOJj" async></script>-->
-<?php //elseif(get_lang() === '_ru'): ?>
-<!--    <script src="//code.jivosite.com/widget.js" data-jv-id="JnSEAmQ9Mx" async></script>-->
-<?php //else: ?>
-<!--    <script src="//code.jivosite.com/widget.js" data-jv-id="ccsCceyaHX" async></script>-->
-<?php //endif; ?>
+<?php if(get_lang() === '_ro'): ?>
+    <script src="//code.jivosite.com/widget.js" data-jv-id="5vyLmibleu" async></script>
+<?php elseif(get_lang() === '_ru'): ?>
+    <script src="//code.jivosite.com/widget.js" data-jv-id="ueV0DjFr9y" async></script>
+<?php else: ?>
+    <script src="//code.jivosite.com/widget.js" data-jv-id="42pQN8WLSJ" async></script>
+<?php endif; ?>
 
 
 </body>
